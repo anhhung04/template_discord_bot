@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "node src/test.js"
+    "test": "concurrently \"node index.js\" \"node test.js\""
   },
   "keywords": [],
   "author": "AnhHung",
