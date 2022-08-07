@@ -1,0 +1,6 @@
+{
+    "client_id": "clientId",
+    "default_prefix":"_",
+    "TOKEN":"token",
+    "urlDB":"linkDB"
+}
