@@ -6,7 +6,7 @@ require('dotenv').config();
 const token = process.env.TOKEN||require('./config.json')["TOKEN"];
 
 const commands = [];
-const commandFiles = fs.readdirSync('./src/slash_commands').filter(file => file.endsWith('.js'));
+const commandFiles = fs.readdirSync('./src/interaction_handlers/slash_commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
 	const command = require(`./slash_commands/${file}`);
