@@ -1,5 +1,5 @@
 const deploySlashCommand = require('./deploy-slash-command.js');
-const guildTestId;
+const guildTestId = "993322665043579032";
 
 deploySlashCommand(guildTestId);
 
