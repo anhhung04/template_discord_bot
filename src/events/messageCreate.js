@@ -31,7 +31,7 @@ module.exports = {
     async execute(message){
         let timestamp = message.createdTimestamp;
         let time_limit = 0.5*60*1000;
-        let last_timestamp = timers.get(interaction.member.id)||0;
+        let last_timestamp = timers.get(message.member.id)||0;
         let diff = timestamp - last_timestamp;
         let prefix = prefixes.get(message.guildId)||default_prefix;
 
@@ -42,7 +42,7 @@ module.exports = {
             return message.channel.send(`Please wait ${left_sec} seconds`);
         }
 
-        timers.set(interaction.member.id, Date.now());
+        timers.set(message.member.id, Date.now());
 
         let [commandName, ...args] = message.content.slice(prefix.length).split(/\s+/);
         args = args.join(' ');
