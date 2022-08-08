@@ -1,5 +1,9 @@
+const {SlashCommandBuilder} = require('discord.js');
+
 module.exports = {
-    name: "name",
+    data: new SlashCommandBuilder()
+                .setName('name')
+                .setDescription('description'),
     async execute(interaction){
         ...
     }
