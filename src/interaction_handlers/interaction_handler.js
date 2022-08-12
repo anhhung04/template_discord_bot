@@ -7,7 +7,7 @@ const slashCommandFiles = fs.readdirSync('./src/interaction_handlers/slash_comma
 for (let file of slashCommandFiles) {
     if(!file) continue;
 	let slash_command = require(`./slash_commands/${file}`);
-	slash_commands.set(slash_command.data.name, command);
+	slash_commands.set(slash_command.data.name, slash_command);
 }
 
 const buttons = new Collection();
