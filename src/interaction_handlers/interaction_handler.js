@@ -20,7 +20,7 @@ for (let file of buttonFiles) {
 }
 
 const modals = new Collection();
-const modalFiles = fs.readdirSync('./src/interaction_handlers/buttons').filter(file => file.endsWith('.js'));
+const modalFiles = fs.readdirSync('./src/interaction_handlers/modals').filter(file => file.endsWith('.js'));
 
 for (let file of modalFiles) {
     if(!file) continue;
@@ -29,7 +29,7 @@ for (let file of modalFiles) {
 }
 
 const select_menus = new Collection();
-const selectMenuFiles = fs.readdirSync('./src/interaction_handlers/buttons').filter(file => file.endsWith('.js'));
+const selectMenuFiles = fs.readdirSync('./src/interaction_handlers/select_menus').filter(file => file.endsWith('.js'));
 
 for (let file of selectMenuFiles) {
     if(!file) continue;
