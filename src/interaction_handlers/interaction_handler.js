@@ -47,21 +47,21 @@ module.exports = async function(interaction){
         case InteractionType.ApplicationCommand:{
             let command = slash_commands.get(commandName);
 
-            return command.execute(interaction);
+            return command?.execute(interaction);
         }case InteractionType.ModalSubmit:{
             let modal = modals.get(customId);
 
-            return modal.execute(interaction);
+            return modal?.execute(interaction);
         }case InteractionType.MessageComponent:{
             switch(interaction.componentType){
                 case ComponentType.Button:{
                     let button = buttons.get(customId);
 
-                    return button.execute(interaction);
+                    return button?.execute(interaction);
                 }case ComponentType.SelectMenu:{
                     let select_menu = select_menus.get(customId);
 
-                    return select_menu.execute(interaction);
+                    return select_menu?.execute(interaction);
                 }
             }
         }
